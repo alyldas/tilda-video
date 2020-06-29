@@ -50,7 +50,7 @@
 
 <body>
 
-    <video loop id="myVideo">
+    <video autoplay loop muted id="myVideo">
         <source src="ForBiggerBlazes.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
@@ -79,7 +79,9 @@
     </script>
 
     <script type="text/javascript">
-        document.getElementById("myVideo").play();
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById("myVideo").removeAttribute("muted");
+        }
     </script>
 
 </body>
